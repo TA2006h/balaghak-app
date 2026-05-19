@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "795137276652",
+    "project_id": "balaghak-c28d2",
+    "storage_bucket": "balaghak-c28d2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:795137276652:android:03979e64b8a2eb8f42c3c9",
+        "android_client_info": {
+          "package_name": "com.example.testapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhA_NYn5Pmwq_2T0z2HrDP3xCCCPlXHOY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

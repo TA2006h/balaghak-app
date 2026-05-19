@@ -1,0 +1,36 @@
+name: testapp
+description: بلاغك - منصة التبليغ الآمن
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Firebase
+  firebase_core: ^4.8.0
+  firebase_auth: ^6.5.0
+  cloud_firestore: ^6.4.0
+  firebase_storage: ^13.4.0
+
+  # وسائط
+  image_picker: ^1.1.2
+
+  # واجهة
+  fl_chart: ^1.2.0          # رسوم بيانية
+  intl: ^0.20.2              # تنسيق التاريخ
+  cached_network_image: ^3.3.1
+  firebase_messaging: ^16.2.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - lib/images/
