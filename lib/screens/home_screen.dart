@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:testapp/widgets/app_colors.dart';
-import 'package:testapp/widgets/custom_button.dart';
-import 'add_report_screen.dart';
-import 'my_reports_screen.dart';
-import 'settings_screen.dart';
+import 'package:testapp/screens/add_report_screen.dart';
+import 'package:testapp/screens/login_screen.dart';
+
+// 1. تأكد من تعديل هذا السطر ليتوافق مع المسار الصحيح لملف الإعدادات الحالي عندك:
+import 'package:testapp/screens/settings_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -16,95 +17,145 @@ class HomeScreen extends StatelessWidget {
         height: double.infinity,
         decoration: const BoxDecoration(
           gradient: LinearGradient(
+            colors: [AppColors.bNavy, AppColors.bNavyDark],
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: [AppColors.bNavy, AppColors.bNavyDark],
           ),
         ),
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              const SizedBox(height: 70),
-              Container(
-                height: 140,
-                width: 140,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  border: Border.all(color: AppColors.bGold, width: 1.5),
-                  boxShadow: [
-                    BoxShadow(
-                      color: AppColors.bGold.withOpacity(0.2),
-                      blurRadius: 30,
+        child: SafeArea(
+          child: Padding(
+            padding:
+                const EdgeInsets.symmetric(horizontal: 24.0, vertical: 10.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                // --- 2. هذا هو الصف العلوي الجديد الذي يحتوي على زر الإعدادات جهة اليسار ---
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    IconButton(
+                      icon: const Icon(Icons.settings_rounded,
+                          color: AppColors.bGold, size: 28),
+                      onPressed: () {
+                        // الانتقال إلى شاشة الإعدادات الموجودة عندك عند الضغط على الزر
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const SettingsScreen()),
+                        );
+                      },
                     ),
+                    const SizedBox(), // للحفاظ على التوازن وتوزيع المحاذاة في الصف
                   ],
                 ),
-                child: const Center(
-                  child: Icon(Icons.shield_rounded,
-                      size: 80, color: AppColors.bGold),
-                ),
-              ),
-              const SizedBox(height: 20),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                textDirection: TextDirection.rtl,
-                children: [
-                  const Text("بلاغ",
-                      style: TextStyle(
-                          color: AppColors.bGold,
-                          fontSize: 50,
-                          fontWeight: FontWeight.bold)),
-                  Container(
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-                    decoration: BoxDecoration(
-                        color: AppColors.bGold,
-                        borderRadius: BorderRadius.circular(8)),
-                    child: const Text("ك",
-                        style: TextStyle(
-                            color: AppColors.bNavy,
-                            fontSize: 35,
-                            fontWeight: FontWeight.bold)),
+
+                const Spacer(), // توزيع مسافة مرنة لتوسيط الشعار
+
+                // الشعار العلوي لنظام البلاغات
+                Container(
+                  padding: const EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: AppColors.bGold.withOpacity(0.05),
+                    border: Border.all(
+                        color: AppColors.bGold.withOpacity(0.15), width: 1.5),
                   ),
-                ],
-              ),
-              const SizedBox(height: 10),
-              const Text("منصتك الآمنة للبلاغات الإلكترونية",
-                  style: TextStyle(color: Colors.white54, fontSize: 16)),
-              const SizedBox(height: 60),
-              CustomMenuButton(
-                title: "تقديم بلاغ إلكتروني جديد",
-                icon: Icons.edit_note_rounded,
-                onTap: () {
-                  Navigator.push(
+                  child: const Icon(
+                    Icons.gavel_rounded,
+                    size: 80,
+                    color: AppColors.bGold,
+                  ),
+                ),
+                const SizedBox(height: 30),
+                const Text(
+                  "نظام بلاغك الأمني",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 26,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const SizedBox(height: 10),
+                Text(
+                  "منصة رسمية مشفرة لتقديم ومتابعة بلاغات الجرائم الإلكترونية بكل سرية وأمان تام",
+                  style: TextStyle(
+                    color: Colors.white.withOpacity(0.5),
+                    fontSize: 14,
+                    height: 1.5,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+
+                const Spacer(), // مسافة مرنة ثانية قبل الأزرار الكبيرة
+
+                // الزر الأول: تسجيل بلاغ جديد
+                ElevatedButton.icon(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: AppColors.bGold,
+                    foregroundColor: AppColors.bNavy,
+                    minimumSize: const Size(double.infinity, 55),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    elevation: 2,
+                  ),
+                  onPressed: () {
+                    Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const AddReportScreen()));
-                },
-              ),
-              CustomMenuButton(
-                title: "بلاغاتي ومتابعتها",
-                icon: Icons.fact_check_outlined,
-                onTap: () {
-                  Navigator.push(
+                          builder: (context) => const AddReportScreen()),
+                    );
+                  },
+                  icon: const Icon(Icons.add_moderator_rounded, size: 22),
+                  label: const Text(
+                    "تسجيل بلاغ جديد",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                  ),
+                ),
+                const SizedBox(height: 20),
+
+                // الزر الثاني: بلاغاتي ومتابعتها
+                OutlinedButton.icon(
+                  style: OutlinedButton.styleFrom(
+                    foregroundColor: AppColors.bGold,
+                    side: const BorderSide(color: AppColors.bGold, width: 1.5),
+                    minimumSize: const Size(double.infinity, 55),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                  ),
+                  onPressed: () {
+                    Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const MyReportsScreen()));
-                },
-              ),
-              CustomMenuButton(
-                title: "الإعدادات والحساب",
-                icon: Icons.settings_suggest_outlined,
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const SettingsScreen()));
-                },
-              ),
-              const SizedBox(height: 80),
-              const Text("جميع الحقوق محفوظة © 2026",
-                  style: TextStyle(color: Colors.white24, fontSize: 12)),
-            ],
+                          builder: (context) => const LoginScreen()),
+                    );
+                  },
+                  icon: const Icon(Icons.folder_shared_rounded, size: 22),
+                  label: const Text(
+                    "بلاغاتي ومتابعتها",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                  ),
+                ),
+
+                const Spacer(),
+
+                // نص الحماية السفلية
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "جميع البيانات مشفرة وفقاً لمعايير الأمن الرقمي",
+                      style: TextStyle(
+                          color: Colors.white.withOpacity(0.3), fontSize: 11),
+                    ),
+                    const SizedBox(width: 6),
+                    Icon(Icons.lock_outline_rounded,
+                        size: 14, color: Colors.white.withOpacity(0.3)),
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),
