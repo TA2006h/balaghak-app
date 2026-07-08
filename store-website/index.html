@@ -21,9 +21,6 @@
       </a>
 
       <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden>
-      <label for="nav-toggle" class="nav-toggle-btn" aria-label="فتح القائمة">
-        <span></span><span></span><span></span>
-      </label>
 
       <nav class="navbar" aria-label="التنقل الرئيسي">
         <ul class="nav-links">
@@ -32,6 +29,15 @@
           <li><a href="#kids">تشكيلة للأطفال</a></li>
         </ul>
       </nav>
+
+      <button type="button" class="cart-btn" id="cart-open" aria-label="فتح سلة المشتريات">
+        <span class="cart-icon" aria-hidden="true">🛒</span>
+        <span class="cart-count" id="cart-count">0</span>
+      </button>
+
+      <label for="nav-toggle" class="nav-toggle-btn" aria-label="فتح القائمة">
+        <span></span><span></span><span></span>
+      </label>
     </div>
   </header>
 
@@ -266,5 +272,48 @@
       <p>© 2026 متجر بداية — جميع الحقوق محفوظة.</p>
     </div>
   </footer>
+
+  <!-- ======================= السلة الجانبية ======================= -->
+  <div class="cart-backdrop" id="cart-backdrop" hidden></div>
+
+  <aside class="cart-panel" id="cart-panel" aria-label="سلة المشتريات" aria-hidden="true">
+    <header class="cart-head">
+      <h2>سلة المشتريات</h2>
+      <button type="button" class="cart-close" id="cart-close" aria-label="إغلاق السلة">✕</button>
+    </header>
+
+    <div class="cart-items" id="cart-items">
+      <p class="cart-empty" id="cart-empty">سلتك فارغة حالياً. أضف بعض الكافرات لتبدأ طلبك!</p>
+    </div>
+
+    <div class="cart-summary">
+      <div class="cart-total-row">
+        <span>المجموع الإجمالي</span>
+        <span class="cart-total" id="cart-total">0 د.ل</span>
+      </div>
+
+      <form class="checkout-form" id="checkout-form" novalidate>
+        <h3>بيانات التوصيل</h3>
+        <label>
+          الاسم الكامل
+          <input type="text" id="cust-name" name="name" required autocomplete="name" placeholder="مثال: محمد علي">
+        </label>
+        <label>
+          رقم الهاتف
+          <input type="tel" id="cust-phone" name="phone" required autocomplete="tel" placeholder="مثال: 0912345678">
+        </label>
+        <label>
+          المدينة
+          <input type="text" id="cust-city" name="city" required autocomplete="address-level2" placeholder="مثال: طرابلس">
+        </label>
+        <p class="checkout-error" id="checkout-error" hidden></p>
+        <button type="submit" class="btn btn-whatsapp" id="whatsapp-btn">
+          <span aria-hidden="true">✔</span> تأكيد الطلب عبر الواتساب
+        </button>
+      </form>
+    </div>
+  </aside>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
