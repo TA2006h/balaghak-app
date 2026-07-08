@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="متجر بداية - متخصصون في بيع كافرات الآيباد في ليبيا. تشكيلات رجالية ونسائية وقريباً للأطفال.">
+  <title>متجر بداية</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+</head>
+<body>
+  <!-- ======================= الرأس وشريط التنقل ======================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="brand" aria-label="متجر بداية">
+        <img src="images/logo.svg" alt="شعار متجر بداية" class="brand-logo">
+        <span class="brand-name">متجر بداية</span>
+      </a>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden>
+
+      <nav class="navbar" aria-label="التنقل الرئيسي">
+        <ul class="nav-links">
+          <li><a href="#men">تشكيلة رجالية</a></li>
+          <li><a href="#women">تشكيلة نسائية</a></li>
+          <li><a href="#kids">تشكيلة للأطفال</a></li>
+        </ul>
+      </nav>
+
+      <button type="button" class="cart-btn" id="cart-open" aria-label="فتح سلة المشتريات">
+        <span class="cart-icon" aria-hidden="true">🛒</span>
+        <span class="cart-count" id="cart-count">0</span>
+      </button>
+
+      <label for="nav-toggle" class="nav-toggle-btn" aria-label="فتح القائمة">
+        <span></span><span></span><span></span>
+      </label>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================= القسم الترحيبي ======================= -->
+    <section class="hero" id="home">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <span class="hero-eyebrow">صُنع في ليبيا · جودة تدوم</span>
+          <h1 class="hero-title">كافرات آيباد بأناقة تناسب أسلوبك</h1>
+          <p class="hero-text">
+            في <strong>متجر بداية</strong> نحن متخصصون في بيع كافرات الآيباد في ليبيا.
+            نوفّر تشكيلات عصرية تجمع بين الحماية المتينة والتصميم الأنيق، مع توصيل لجميع المدن الليبية.
+          </p>
+          <div class="hero-actions">
+            <a href="#men" class="btn btn-primary">تصفّح التشكيلة الرجالية</a>
+            <a href="#women" class="btn btn-outline">التشكيلة النسائية</a>
+          </div>
+          <ul class="hero-highlights">
+            <li>✔ توصيل لكل ليبيا</li>
+            <li>✔ دفع عند الاستلام</li>
+            <li>✔ ضمان الجودة</li>
+          </ul>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <img src="images/hero-cover.svg" alt="كافر آيباد">
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= تشكيلة رجالية ======================= -->
+    <section class="products-section" id="men">
+      <div class="container">
+        <header class="section-head">
+          <h2 class="section-title">تشكيلة رجالية</h2>
+          <p class="section-subtitle">تصاميم أنيقة وعملية تناسب الاستخدام اليومي والعمل.</p>
+        </header>
+        <div class="products-grid">
+          <article class="product-card">
+            <div class="product-media"><img src="images/cover-men-1.svg" alt="كافر آيباد رجالي جلد كلاسيك"></div>
+            <div class="product-body">
+              <h3 class="product-name">كافر جلد كلاسيك — أسود</h3>
+              <p class="product-desc">جلد صناعي فاخر مع حامل مدمج.</p>
+              <div class="product-footer">
+                <span class="product-price">120 د.ل</span>
+                <button class="btn btn-small">أضف للسلة</button>
+              </div>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-media"><img src="images/cover-men-2.svg" alt="كافر آيباد رجالي كربوني"></div>
+            <div class="product-body">
+              <h3 class="product-name">كافر كربوني — رمادي</h3>
+              <p class="product-desc">ملمس كربوني مقاوم للصدمات.</p>
+              <div class="product-footer">
+                <span class="product-price">150 د.ل</span>
+                <button class="btn btn-small">أضف للسلة</button>
+              </div>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-media"><img src="images/cover-men-3.svg" alt="كافر آيباد رجالي كحلي"></div>
+            <div class="product-body">
+              <h3 class="product-name">كافر ذكي — كحلي</h3>
+              <p class="product-desc">إغلاق مغناطيسي وتفعيل تلقائي للسكون.</p>
+              <div class="product-footer">
+                <span class="product-price">135 د.ل</span>
+                <button class="btn btn-small">أضف للسلة</button>
+              </div>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-media"><img src="images/cover-men-4.svg" alt="كافر آيباد رجالي بني"></div>
+            <div class="product-body">
+              <h3 class="product-name">كافر جلد بني — فينتج</h3>
+              <p class="product-desc">مظهر كلاسيكي مع جيوب للأقلام.</p>
+              <div class="product-footer">
+                <span class="product-price">160 د.ل</span>
+                <button class="btn btn-small">أضف للسلة</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= تشكيلة نسائية ======================= -->
+    <section class="products-section alt" id="women">
+      <div class="container">
+        <header class="section-head">
+          <h2 class="section-title">تشكيلة نسائية</h2>
+          <p class="section-subtitle">ألوان مبهجة ولمسات ناعمة تعكس ذوقك الرفيع.</p>
+        </header>
+        <div class="products-grid">
+          <article class="product-card">
+            <div class="product-media"><img src="images/cover-women-1.svg" alt="كافر آيباد نسائي وردي"></div>
+            <div class="product-body">
+              <h3 class="product-name">كافر ناعم — وردي</h3>
+              <p class="product-desc">حماية خفيفة بلمسة أنثوية راقية.</p>
+              <div class="product-footer">
+                <span class="product-price">125 د.ل</span>
+                <button class="btn btn-small">أضف للسلة</button>
+              </div>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-media"><img src="images/cover-women-2.svg" alt="كافر آيباد نسائي بنفسجي"></div>
+            <div class="product-body">
+              <h3 class="product-name">كافر لامع — بنفسجي</h3>
+              <p class="product-desc">تشطيب لامع مع حامل قابل للطي.</p>
+              <div class="product-footer">
+                <span class="product-price">140 د.ل</span>
+                <button class="btn btn-small">أضف للسلة</button>
+              </div>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-media"><img src="images/cover-women-3.svg" alt="كافر آيباد نسائي تركوازي"></div>
+            <div class="product-body">
+              <h3 class="product-name">كافر ذكي — تركوازي</h3>
+              <p class="product-desc">إغلاق مغناطيسي وتصميم انسيابي.</p>
+              <div class="product-footer">
+                <span class="product-price">145 د.ل</span>
+                <button class="btn btn-small">أضف للسلة</button>
+              </div>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-media"><img src="images/cover-women-4.svg" alt="كافر آيباد نسائي ذهبي"></div>
+            <div class="product-body">
+              <h3 class="product-name">كافر فاخر — ذهبي</h3>
+              <p class="product-desc">حواف مذهّبة تمنحك إطلالة مميزة.</p>
+              <div class="product-footer">
+                <span class="product-price">175 د.ل</span>
+                <button class="btn btn-small">أضف للسلة</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= تشكيلة للأطفال (يتوفر قريباً) ======================= -->
+    <section class="products-section coming-soon-section" id="kids">
+      <div class="container">
+        <header class="section-head">
+          <h2 class="section-title">
+            تشكيلة للأطفال
+            <span class="badge-soon">يتوفر قريباً</span>
+          </h2>
+          <p class="section-subtitle">نعمل على تشكيلة مرحة وآمنة لأطفالكم — ترقّبوا الإطلاق!</p>
+        </header>
+
+        <div class="coming-soon-wrap">
+          <div class="products-grid is-disabled" aria-hidden="true">
+            <article class="product-card">
+              <div class="product-media"><img src="images/cover-kids-1.svg" alt="كافر آيباد للأطفال"></div>
+              <div class="product-body">
+                <h3 class="product-name">كافر مقاوم للصدمات</h3>
+                <p class="product-desc">حواف سميكة ومقبض للحمل.</p>
+                <div class="product-footer">
+                  <span class="product-price">— د.ل</span>
+                  <button class="btn btn-small" disabled>قريباً</button>
+                </div>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-media"><img src="images/cover-kids-2.svg" alt="كافر آيباد للأطفال بألوان مرحة"></div>
+              <div class="product-body">
+                <h3 class="product-name">كافر بشخصيات كرتونية</h3>
+                <p class="product-desc">ألوان مبهجة تحبها الأطفال.</p>
+                <div class="product-footer">
+                  <span class="product-price">— د.ل</span>
+                  <button class="btn btn-small" disabled>قريباً</button>
+                </div>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-media"><img src="images/cover-kids-3.svg" alt="كافر آيباد للأطفال بحامل"></div>
+              <div class="product-body">
+                <h3 class="product-name">كافر بحامل ومقبض</h3>
+                <p class="product-desc">مناسب للمشاهدة والتعلّم.</p>
+                <div class="product-footer">
+                  <span class="product-price">— د.ل</span>
+                  <button class="btn btn-small" disabled>قريباً</button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="coming-soon-overlay">
+            <div class="coming-soon-card">
+              <span class="coming-soon-icon" aria-hidden="true">🧸</span>
+              <h3>يتوفر قريباً</h3>
+              <p>تشكيلة الأطفال قيد التجهيز. اشترك ليصلك إشعار عند توفّرها.</p>
+              <a href="#home" class="btn btn-primary">أعلمني عند التوفّر</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================= التذييل ======================= -->
+  <footer class="site-footer" id="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="images/logo.svg" alt="شعار متجر بداية" class="brand-logo">
+        <div>
+          <h3>متجر بداية</h3>
+          <p>متخصصون في بيع كافرات الآيباد في ليبيا.</p>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>الأقسام</h4>
+        <ul>
+          <li><a href="#men">تشكيلة رجالية</a></li>
+          <li><a href="#women">تشكيلة نسائية</a></li>
+          <li><a href="#kids">تشكيلة للأطفال</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>تواصل معنا</h4>
+        <ul>
+          <li>الهاتف: 000 000 91 218+</li>
+          <li>البريد: info@bidaya-store.ly</li>
+          <li>العنوان: طرابلس، ليبيا</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 متجر بداية — جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <!-- ======================= السلة الجانبية ======================= -->
+  <div class="cart-backdrop" id="cart-backdrop" hidden></div>
+
+  <aside class="cart-panel" id="cart-panel" aria-label="سلة المشتريات" aria-hidden="true">
+    <header class="cart-head">
+      <h2>سلة المشتريات</h2>
+      <button type="button" class="cart-close" id="cart-close" aria-label="إغلاق السلة">✕</button>
+    </header>
+
+    <div class="cart-items" id="cart-items">
+      <p class="cart-empty" id="cart-empty">سلتك فارغة حالياً. أضف بعض الكافرات لتبدأ طلبك!</p>
+    </div>
+
+    <div class="cart-summary">
+      <div class="cart-total-row">
+        <span>المجموع الإجمالي</span>
+        <span class="cart-total" id="cart-total">0 د.ل</span>
+      </div>
+
+      <form class="checkout-form" id="checkout-form" novalidate>
+        <h3>بيانات التوصيل</h3>
+        <label>
+          الاسم الكامل
+          <input type="text" id="cust-name" name="name" required autocomplete="name" placeholder="مثال: محمد علي">
+        </label>
+        <label>
+          رقم الهاتف
+          <input type="tel" id="cust-phone" name="phone" required autocomplete="tel" placeholder="مثال: 0912345678">
+        </label>
+        <label>
+          المدينة
+          <input type="text" id="cust-city" name="city" required autocomplete="address-level2" placeholder="مثال: طرابلس">
+        </label>
+        <p class="checkout-error" id="checkout-error" hidden></p>
+        <button type="submit" class="btn btn-whatsapp" id="whatsapp-btn">
+          <span aria-hidden="true">✔</span> تأكيد الطلب عبر الواتساب
+        </button>
+      </form>
+    </div>
+  </aside>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

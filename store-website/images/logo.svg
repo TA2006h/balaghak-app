@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="شعار متجر بداية">
+  <defs>
+    <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1f6f6b"/>
+      <stop offset="1" stop-color="#16514e"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="56" height="56" rx="16" fill="url(#lg)"/>
+  <!-- شكل كافر آيباد مبسط -->
+  <rect x="20" y="14" width="24" height="34" rx="4" fill="#ffffff" opacity="0.95"/>
+  <rect x="23.5" y="18" width="17" height="24" rx="2" fill="#1f6f6b" opacity="0.25"/>
+  <circle cx="32" cy="45" r="1.6" fill="#1f6f6b"/>
+  <!-- لمسة ذهبية -->
+  <path d="M46 20 l3 6 6 .8 -4.4 4.2 1.1 6-5.7-3-5.7 3 1.1-6-4.4-4.2 6-.8z" fill="#e0a458"/>
+</svg>
